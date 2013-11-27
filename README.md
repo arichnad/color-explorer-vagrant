@@ -25,7 +25,7 @@ Usage
 * `./start-bitcoind.sh` (wait 25 minutes for testnet download)
 * `tail -f ~/.bitcoin/testnet3/debug.log` (if you'd like to see how things are going)
 * `./start-bitcoin-abe.sh` (wait 45 minutes for the scanning to finish)
-* back on your host computer, open a browser to:  http://localhost:2750/color-explorer/index.html
+* back on your host computer, open a browser to:  http://localhost:2750/
 
 License
 -------

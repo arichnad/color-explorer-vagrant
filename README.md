@@ -32,3 +32,8 @@ License
 
 MIT (see LICENSE file)
 
+More information
+----------------
+
+See http://coloredcoins.org/
+

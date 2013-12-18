@@ -3,7 +3,7 @@ color-explorer
 
 A vagrant script to set up a VM that sets up these systems:
 
-* arichnad/bitcoin-abe
+* arichnad/bitcoin-abe-color-explorer
 * arichnad/bitcoin-tx-spent-db-abe (the color explorer)
 
 The Bug

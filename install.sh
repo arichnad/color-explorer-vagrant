@@ -18,8 +18,8 @@ sudo apt-get --yes --purge remove bash-completion
 
 sudo -uvagrant -i bash -c '
 	git clone https://github.com/bitcoinx/ngcccbase.git &&
-	git clone https://github.com/arichnad/bitcoin-abe.git &&
-	cd bitcoin-abe/Abe/htdocs &&
+	git clone https://github.com/arichnad/bitcoin-abe-color-explorer.git &&
+	cd bitcoin-abe-color-explorer/Abe/htdocs &&
 	git clone https://github.com/arichnad/bitcoin-tx-spent-db-abe.git color-explorer
 '
 

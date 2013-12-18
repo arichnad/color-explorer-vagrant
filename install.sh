@@ -2,7 +2,14 @@
 
 set -e
 
-if [ -e '/provisioned' ]; then exit 0; fi
+if [ -e '/provisioned' ]; then
+	echo assuming this system has been set up
+	echo starting bitcoind and bitcoin-abe
+	sudo -uvagrant -i bash -c '
+		./start-bitcoind.sh && nohup ./start-bitcoin-abe.sh &
+	'
+	exit 0
+fi
 touch /provisioned
 
 apt-get update

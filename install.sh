@@ -2,6 +2,8 @@
 
 set -e
 
+umount /vagrant #see this bug: https://bugs.launchpad.net/ubuntu/+bug/1239417
+
 if [ -e '/provisioned' ]; then
 	echo assuming this system has been set up
 	echo starting bitcoind and bitcoin-abe

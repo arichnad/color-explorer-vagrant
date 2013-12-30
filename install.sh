@@ -16,12 +16,17 @@ touch /provisioned
 
 apt-get update
 apt-get install --no-install-recommends --yes git bitcoind python python-crypto python-virtualenv
-sudo apt-get --yes --purge remove bash-completion
+apt-get --yes --purge remove bash-completion
 
-sudo -uvagrant -i bash -c '
-	git clone https://github.com/bitcoinx/ngcccbase.git &&
-	git clone https://github.com/arichnad/bitcoin-abe-color-explorer.git &&
-	cd bitcoin-abe-color-explorer/Abe/htdocs &&
+sudo -uvagrant -i bash <<END
+	set -e
+	
+	mkdir .bitcoin && chmod go= .bitcoin
+	python -c 'print "rpcuser=bitcoinrpc";import uuid;print "rpcpassword="+str(uuid.uuid4())+"-"+str(uuid.uuid4())' >~/.bitcoin/bitcoin.conf
+	
+	git clone https://github.com/bitcoinx/ngcccbase.git
+	git clone https://github.com/arichnad/bitcoin-abe-color-explorer.git
+	cd bitcoin-abe-color-explorer/Abe/htdocs
 	git clone https://github.com/arichnad/bitcoin-tx-spent-db-abe.git color-explorer
-'
+END
 

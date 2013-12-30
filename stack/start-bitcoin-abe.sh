@@ -5,7 +5,7 @@ set -e
 renice +20 -p $$ >/dev/null
 ionice -n7 -p $$
 
-cp -a ~/abe.conf ~/bitcoin-abe/
+cp -a ~/abe.conf ~/bitcoin-abe-color-explorer/
 
 cd ~/bitcoin-abe-color-explorer/
 

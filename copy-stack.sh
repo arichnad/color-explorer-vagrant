@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 #See this bug: https://bugs.launchpad.net/ubuntu/+bug/1239417
 #This script can be removed after this bug is fixed.
 

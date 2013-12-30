@@ -9,12 +9,10 @@ A vagrant script to set up a VM that sets up these systems:
 Usage
 -----
 
-* `vagrant up`
+* `vagrant up` (wait 5 minutes for VM to configure)
 * `./copy-stack.sh`
-* `vagrant ssh`
-* `./start-bitcoind.sh` (follow the instructions regarding setting up the config file)
 * `./start-bitcoind.sh` (wait 25 minutes for testnet download)
-* `tail -f ~/.bitcoin/testnet3/debug.log` (if you'd like to see how things are going)
+* `./watch-bitcoind.sh` (if you'd like to see how things are going)
 * `./start-bitcoin-abe.sh` (wait 45 minutes for the scanning to finish)
 * back on your host computer, open a browser to:  http://localhost:2750/
 

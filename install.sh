@@ -2,7 +2,7 @@
 
 set -e
 
-umount /vagrant #see this bug: https://bugs.launchpad.net/ubuntu/+bug/1239417
+umount /vagrant #see this bug: https://bugs.launchpad.net/ubuntu/+bug/1252872
 
 if [ -e '/provisioned' ]; then
 	echo assuming this system has been set up

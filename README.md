@@ -9,12 +9,18 @@ A vagrant script to set up a VM that sets up these systems:
 Usage
 -----
 
-* `vagrant up` (wait 5 minutes for VM to configure)
-* `./copy-stack.sh`
-* `./start-bitcoind.sh` (wait 25 minutes for testnet download)
-* `./watch-bitcoind.sh` (if you'd like to see how things are going)
-* `./start-bitcoin-abe.sh` (wait 45 minutes for the scanning to finish)
+* `vagrant up` (wait 15 minutes for VM to provision)
+* `./copy-stack.sh` (reboots the system)
+* It takes an hour or so for bitcoind to download the blockchain and for abe to scan.
+* `./watch-bitcoind.sh`, `./watch-abe.sh`, `./status-bitcoind.sh`, or `./watch-all.sh` (if you'd like to see how things are going)
 * back on your host computer, open a browser to:  http://localhost:2750/
+
+Common errors
+-------------
+
+If you've created more than one vagrant, you might need to add all of them to your ssh known_hosts file.
+
+Or `ssh-keygen -f ~/.ssh/known_hosts -R '[localhost]:2222'`
 
 License
 -------

@@ -9,13 +9,15 @@ A vagrant script to set up a VM that sets up these systems:
 Usage
 -----
 
-* `vagrant up` (wait 15 minutes for VM to provision)
-* `./copy-stack.sh` (reboots the system)
-* It takes an hour or so for bitcoind to download the blockchain and for abe to scan.
+* `./up-first.sh` (wait 15 minutes for VM to provision, then it will reboot the system)
+* It takes an hour or two for bitcoind to download the blockchain and for abe to scan.
 * `./watch-bitcoind.sh`, `./watch-abe.sh`, `./status-bitcoind.sh`, `./watch-all.sh`, or `./watch-startup.sh`
 If you'd like to see how things are going.
 Note:  these scripts require you to hit CTRL-C *twice* to exit them.
 * back on your host computer, open a browser to:  http://localhost:2750/
+
+
+You might want to put something like this in your crontab: `@reboot cd ~/CHECKOUT-DIRECTORY/ && ./up.sh >/dev/null 2>&1`
 
 Common errors
 -------------

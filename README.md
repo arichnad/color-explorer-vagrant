@@ -12,7 +12,9 @@ Usage
 * `vagrant up` (wait 15 minutes for VM to provision)
 * `./copy-stack.sh` (reboots the system)
 * It takes an hour or so for bitcoind to download the blockchain and for abe to scan.
-* `./watch-bitcoind.sh`, `./watch-abe.sh`, `./status-bitcoind.sh`, `./watch-all.sh`, or `./watch-startup.sh` (if you'd like to see how things are going)
+* `./watch-bitcoind.sh`, `./watch-abe.sh`, `./status-bitcoind.sh`, `./watch-all.sh`, or `./watch-startup.sh`
+If you'd like to see how things are going.
+Note:  these scripts require you to hit CTRL-C *twice* to exit them.
 * back on your host computer, open a browser to:  http://localhost:2750/
 
 Common errors

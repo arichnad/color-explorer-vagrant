@@ -3,7 +3,7 @@
 set -e #exit on failure
 
 echo 'info:  attempting to delete localhost:2222 from your known hosts'
-ssh-keygen -f ~/.ssh/known_hosts -R '[localhost]:2222' 2>/dev/null
+ssh-keygen -f ~/.ssh/known_hosts -R '[localhost]:2222' 2>/dev/null || true
 
 ./up.sh
 

@@ -42,7 +42,7 @@ sudo -uvagrant -i bash <<END
 	
 	username=\$(tr -dc A-Za-z0-9 </dev/urandom |head -c40)
 	password=\$(tr -dc A-Za-z0-9 </dev/urandom |head -c40)
-	mkdir .bitcoin && chmod go= .bitcoin
+	mkdir -p .bitcoin/testnet3 && chmod go= .bitcoin
 	echo >~/.bitcoin/bitcoin.conf "
 server=1
 daemon=1
@@ -51,6 +51,8 @@ txindex=1
 rpcuser=\$username
 rpcpassword=\$password
 "
+	#bitcoin abe likes to see the file here
+	cp ~/.bitcoin/{,testnet3/}bitcoin.conf
 		
 	echo '### getting github projects ###'
 	git clone https://github.com/bitcoinx/ngcccbase.git

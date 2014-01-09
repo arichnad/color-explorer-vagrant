@@ -25,10 +25,10 @@ ufw --force enable >/dev/null
 
 echo '### upgrading ubuntu ###'
 apt-get update --yes
-apt-get dist-upgrade --yes
+#apt-get dist-upgrade --yes  #won't let the script exit.
 
 echo '### installing packages ###'
-apt-get install --no-install-recommends --yes git bitcoind python python-crypto python-virtualenv
+apt-get install --no-install-recommends --yes git bitcoind python python-crypto python-virtualenv sqlite3
 apt-get --yes --purge remove bash-completion
 
 echo '### creating a swapfile ###'

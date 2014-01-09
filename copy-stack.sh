@@ -9,6 +9,5 @@ scp -P2222 -pr -i ~/.vagrant.d/insecure_private_key stack/* vagrant@localhost:.
 
 vagrant ssh -c 'cp -a ~/abe.conf ~/bitcoin-abe-color-explorer/'
 
-vagrant halt
-vagrant up
+vagrant reload
 

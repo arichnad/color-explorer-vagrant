@@ -19,3 +19,5 @@ vagrant ssh -c 'cp -a ~/abe.conf ~/bitcoin-abe-color-explorer/'
 vagrant halt
 ./up.sh
 
+echo 'you might want to run this to see the startup status:  ./watch-startup.sh'
+

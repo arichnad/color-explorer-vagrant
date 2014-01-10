@@ -22,6 +22,15 @@ Note:  these scripts require you to hit CTRL-C *twice* to exit them.
 
 You might want to put something like this in your crontab: `@reboot cd ~/CHECKOUT-DIRECTORY/ && ./up.sh >/dev/null 2>&1`
 
+System tests
+------------
+
+* `./enable-system-tests.sh` before running anything.
+* After the system boots and the blockchain is downloaded, the system tests will automatically run.
+* Run something like this:  `vagrant ssh -c 'tail startup-watcher.txt'`
+* Whether or not you enabled system tests before startup, you can always use `./enable-system-tests.sh` and `./run-system-tests.sh` after the system is done downloading the blockchain (`./watch-startup.sh`)
+
+
 Starting over
 -------------
 

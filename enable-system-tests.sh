@@ -3,7 +3,7 @@
 FILE=stack/system-tests.properties
 
 echo enabling system tests
-echo to turn off, delete this file:  $FILE
+echo to turn off:  "rm $FILE; vagrant ssh -c 'rm system-tests.properties'"
 
 cat >"$FILE" <<END
 

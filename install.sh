@@ -64,6 +64,7 @@ rpcpassword=\$password
 		echo "@reboot ~/start-bitcoind.sh"
 		echo "@reboot ~/start-abe.sh"
 		echo "@reboot ~/startup-watcher.sh"
+		echo "@hourly ~/ping-abe.sh"
 	) |crontab -
 END
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ~/stack
+
 SYSTEM_TESTS_ENABLED=no
 
 [[ -r system-tests.properties ]] && source system-tests.properties

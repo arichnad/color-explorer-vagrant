@@ -1,4 +1,4 @@
 #!/bin/bash
 
-vagrant ssh -c './run-system-tests.sh'
+vagrant ssh -c '~/stack/run-system-tests.sh'
 
